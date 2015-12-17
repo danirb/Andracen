@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryDark">#312783</color>
+    <color name="primaryDark_95">#F2312783</color>
+    <color name="primaryDark_90">#E6312783</color>
+    <color name="primaryDark_85">#D9312783</color>
+    <color name="primaryDark_80">#CC312783</color>
+    <color name="primaryDark_75">#BF312783</color>
+    <color name="primaryDark_70">#B3312783</color>
+    <color name="primaryDark_65">#A6312783</color>
+    <color name="primaryDark_60">#99312783</color>
+    <color name="primaryDark_55">#8C312783</color>
+    <color name="primaryDark_50">#80312783</color>
+    <color name="primaryDark_45">#73312783</color>
+    <color name="primaryDark_40">#66312783</color>
+    <color name="primaryDark_35">#59312783</color>
+    <color name="primaryDark_30">#4D312783</color>
+    <color name="primaryDark_25">#40312783</color>
+    <color name="primaryDark_20">#33312783</color>
+    <color name="primaryDark_15">#26312783</color>
+    <color name="primaryDark_10">#1A312783</color>
+    <color name="primaryDark_5">#0D312783</color>
+    <color name="primary">#d2cde8</color>
+    <color name="primary_75">#BFd2cde8</color>
+    <color name="primary_90">#E6d2cde8</color>
+    <color name="texto">#212122</color>
+    <color name="colorDentroToolbar">#554596</color>
+    <color name="textoMigasDePan">#43358b</color>
+    <color name="titulo">#212121</color>
+    <color name="blanco_fondos">#f9f8fc</color>
+    <color name="iconomenu">#554596</color>
+    <color name="accent">#FF5B22</color>
+    <color name="botones">#5567ae</color>
+    <color name="negrotransparente">#CC000000</color>
+    <color name="migasDePan">#EFEDF8</color>
+    <color name="gris">#d8d8d8</color>
+
+    <color name="contenidoDialogos">#757575</color>
+    <color name="botonesDialogos">#897cb8</color>
+    <color name="blancoTotal">#FFFFFF</color>
+    <color name="titulosDialogos">#757575</color>
+    <color name="rojo">#f18115</color>
+    <color name="verde">#73b329</color>
+    <color name="amarillo">#fdd525</color>
+    <color name="transparente">#00FFFFFF</color>
+    </resources>
