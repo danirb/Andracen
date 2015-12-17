@@ -41,7 +41,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.android.support:support-v4:23.1.1'
     //Recursos graficos
-    compile 'com.github.rahatarmanahmed:circularprogressview:2.4.0'//progress
     compile 'com.andreabaccega:android-form-edittext:1.2.1@aar' //edittext
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.0'//iconos
     compile 'com.joanzapata.iconify:android-iconify-material:2.1.0'//iconos

@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.Serializable;
@@ -33,22 +34,21 @@ public class PantallaCarga extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //fullscreen
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        if (Build.VERSION.SDK_INT < 16) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
         setContentView(R.layout.activity_pantalla_carga);
-            try {
-                lanzarLlamada();
-            } catch (Exception e) {
-                e.printStackTrace();
-                Intent intent = new Intent(PantallaCarga.this, ConfiguracionActivity.class);
-                startActivity(intent);
+        Button btn_todos = (Button) findViewById(R.id.btn_todos);
+        btn_todos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    lanzarLlamada();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Intent intent = new Intent(PantallaCarga.this, ConfiguracionActivity.class);
+                    startActivity(intent);
+                }
             }
+        });
+
         }
 
 
@@ -63,7 +63,6 @@ public class PantallaCarga extends AppCompatActivity {
                     Intent intent = new Intent(PantallaCarga.this, ListadoDatos.class);
                     intent.putExtra("lista", (Serializable) articulos);
                     startActivity(intent);
-                    finish();
                 }else{
                     Intent intent = new Intent(PantallaCarga.this, ConfiguracionActivity.class);
                     startActivity(intent);
