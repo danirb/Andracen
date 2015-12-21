@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_tipos"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardElevation="5dp"
+    card_view:cardBackgroundColor="@color/botones"
+    card_view:cardUseCompatPadding="true"
+    android:orientation="vertical">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvNombreTipoCL"
+            android:textColor="@color/blanco_fondos"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+</android.support.v7.widget.CardView>
+

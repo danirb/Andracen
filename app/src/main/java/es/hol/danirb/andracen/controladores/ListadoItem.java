@@ -9,25 +9,23 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import adapters.ArticuloAdaptador;
+import adapters.ItemAdaptador;
 import dto.Item;
 import es.hol.danirb.andracen.R;
 
 /**
  * Created by dani on 14/12/15.
  */
-public class ListadoDatos extends AppCompatActivity {
-    private RecyclerView rv;
-    private List<Item> articuloList = new ArrayList<Item>();
+public class ListadoItem extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listado_datos);
+        setContentView(R.layout.activity_listado_items);
         Intent intent = getIntent();
-        articuloList = (List<Item>) intent.getSerializableExtra("lista");
-        rv = (RecyclerView) findViewById(R.id.rvDatos);
-        LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
+        List<Item> articuloList = (List<Item>) intent.getSerializableExtra("lista");
+        RecyclerView rv = (RecyclerView) findViewById(R.id.rvDatos);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
         rv.setLayoutManager(llm);
-        rv.setAdapter(new ArticuloAdaptador(articuloList));
+        rv.setAdapter(new ItemAdaptador(articuloList));
     }
 }

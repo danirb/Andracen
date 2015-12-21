@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'keyandracen'
+            keyPassword '121990'
+            storeFile file('andracenkey')
+            storePassword '121990'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-
     defaultConfig {
         applicationId "es.hol.danirb.andracen"
         minSdkVersion 16
@@ -15,6 +22,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
         }
     }
 }
@@ -30,7 +40,6 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     testCompile 'junit:junit:4.12'
     // Retrofit & OkHttp
-
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
@@ -41,11 +50,13 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.android.support:support-v4:23.1.1'
     //Recursos graficos
-    compile 'com.andreabaccega:android-form-edittext:1.2.1@aar' //edittext
-    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.0'//iconos
-    compile 'com.joanzapata.iconify:android-iconify-material:2.1.0'//iconos
+    compile 'com.andreabaccega:android-form-edittext:1.2.1@aar'
+    //edittext
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.0'
+    //iconos
+    compile 'com.joanzapata.iconify:android-iconify-material:2.1.0'
+    //iconos
     compile('com.afollestad.material-dialogs:core:0.8.1.0@aar') { //dialogos
         transitive = true
     }
-
 }

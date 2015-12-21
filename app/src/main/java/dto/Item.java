@@ -10,12 +10,17 @@ public class Item implements Serializable{
     private  String nombreitem;
     private String nombretipo;
     private String nombrezona;
+    private int y;
+    private int x;
 
-    public Item(int iditem, String nombretipo, String nombreitem, String nombrezona) {
+
+    public Item(int iditem, String nombreitem, String nombretipo, String nombrezona, int y, int x) {
         this.iditem = iditem;
-        this.nombretipo = nombretipo;
         this.nombreitem = nombreitem;
+        this.nombretipo = nombretipo;
         this.nombrezona = nombrezona;
+        this.y = y;
+        this.x = x;
     }
 
     public int getIditem() {
@@ -50,15 +55,7 @@ public class Item implements Serializable{
         this.nombrezona = nombrezona;
     }
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "iditem=" + iditem +
-                ", nombreitem='" + nombreitem + '\'' +
-                ", nombretipo='" + nombretipo + '\'' +
-                ", nombrezona='" + nombrezona + '\'' +
-                '}';
-    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -71,9 +68,37 @@ public class Item implements Serializable{
 
     }
 
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
     @Override
     public int hashCode() {
         return iditem;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "iditem=" + iditem +
+                ", nombreitem='" + nombreitem + '\'' +
+                ", nombretipo='" + nombretipo + '\'' +
+                ", nombrezona='" + nombrezona + '\'' +
+                ", y=" + y +
+                ", x=" + x +
+                '}';
     }
 }
 

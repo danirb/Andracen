@@ -18,20 +18,13 @@ import retrofit.Retrofit;
 public class ServiceGenerator {
     //    public static final String API_BASE_URL = "http://your.api-base.url";
     private static String API_BASE_URL = Aplicacion.getConfiguracion().getURL();
-
-
-
     private static OkHttpClient httpClient = new OkHttpClient();
-
     private static Retrofit.Builder builder =
             new Retrofit.Builder()
                     .baseUrl(API_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create());
 
-
-
     public static <S> S createService(Class<S> serviceClass) {
-        httpClient.setConnectTimeout(15, TimeUnit.SECONDS);
         Retrofit retrofit = builder.client(httpClient).build();
         return retrofit.create(serviceClass);
     }

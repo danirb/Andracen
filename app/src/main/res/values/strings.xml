@@ -74,4 +74,7 @@
     <string name="aceptar">Aceptar</string>
     <string name="dialogo_exito">Correcto</string>
     <string name="cancelar">Cancelar</string>
+    <string name="title_activity_listado_zonas">ListadoZonas</string>
+    <string name="andracen">Andracen</string>
+    <string name="title_activity_item_detallado">ItemDetallado</string>
 </resources>

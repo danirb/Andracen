@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.andreabaccega.formedittextvalidator.DomainValidator;
 import com.andreabaccega.formedittextvalidator.IpAddressValidator;
@@ -39,8 +41,6 @@ public class ConfiguracionActivity  extends AppCompatActivity implements View.On
     private Configuracion configuracion = Aplicacion.getConfiguracion();
     private FormEditText ipValue;
     private EditText portValue;
-    private EditText terminalValue;
-    private EditText idioma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class ConfiguracionActivity  extends AppCompatActivity implements View.On
         setContentView(R.layout.layout_activity_configuracion);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(new IconDrawable(this, MaterialIcons.md_arrow_back).colorRes(R.color.colorDentroToolbar).actionBarSize());
+        actionBar.setHomeAsUpIndicator(new IconDrawable(this, MaterialIcons.md_arrow_back).colorRes(R.color.primaryDark).actionBarSize());
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         ipValue = (FormEditText) findViewById(R.id.config_ip_valor);
@@ -61,8 +61,6 @@ public class ConfiguracionActivity  extends AppCompatActivity implements View.On
         portValue = (EditText) findViewById(R.id.config_puerto_valor);
         portValue.setOnFocusChangeListener(this);
         portValue.setText(configuracion.getPuerto());
-        terminalValue = (EditText) findViewById(R.id.config_terminal_valor);
-        terminalValue.setOnFocusChangeListener(this);
 
     }
 
@@ -82,24 +80,32 @@ public class ConfiguracionActivity  extends AppCompatActivity implements View.On
         return true;
     }
 
+
     private void showDialog() {
-        Dialogos.crearDialogoSimple(this, R.string.guardar, R.string.pregunta_guardar_configuracion)
-                .callback(new MaterialDialog.ButtonCallback() {
+        new MaterialDialog.Builder(this)
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
                     @Override
-                    public void onPositive(MaterialDialog dialog) {
-                        super.onPositive(dialog);
+                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
                         guardarDatos();
-
-
                     }
-
+                })
+                .onNeutral(new MaterialDialog.SingleButtonCallback() {
                     @Override
-                    public void onNegative(MaterialDialog dialog) {
-                        super.onNegative(dialog);
+                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                        // TODO
+                    }
+                })
+                .onNegative(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
                         dialog.dismiss();
                         finish();
                     }
                 })
+                .title(R.string.guardar)
+                .content(R.string.pregunta_guardar_configuracion)
+                .positiveText(this.getString(R.string.aceptar))
+                .negativeText(this.getString(R.string.cancelar))
                 .show();
     }
 
@@ -162,9 +168,6 @@ public class ConfiguracionActivity  extends AppCompatActivity implements View.On
         return getIPDomainValue() + ":" + getPort();
     }
 
-    private String terminal() {
-        return terminalValue.getText().toString();
-    }
 
 
     @Override
