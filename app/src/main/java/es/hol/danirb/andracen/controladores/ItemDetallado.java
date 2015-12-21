@@ -7,10 +7,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,12 +16,6 @@ import android.widget.TextView;
 import dto.Item;
 import dto.ItemCompleto;
 import es.hol.danirb.andracen.R;
-import rest.Service;
-import rest.ServiceGenerator;
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
 
 public class ItemDetallado extends AppCompatActivity {
     Item articulo;
@@ -39,7 +31,6 @@ public class ItemDetallado extends AppCompatActivity {
         Intent intent = getIntent();
         articulo = (Item) intent.getSerializableExtra("articulo");
         context = this;
-
         TextView tv_nombre = (TextView) findViewById(R.id.tv_nombre_item_id);
         tv_nombre.setText(articulo.getNombreitem());
         TextView tv_tipo = (TextView) findViewById(R.id.tv_tipo_id);
@@ -47,8 +38,6 @@ public class ItemDetallado extends AppCompatActivity {
         LinearLayout cuadro = (LinearLayout) findViewById(R.id.zona);
         Lienzo zona = new Lienzo(context);
         cuadro.addView(zona);
-
-
 
         context = this;
 
@@ -61,7 +50,6 @@ public class ItemDetallado extends AppCompatActivity {
 
         public Lienzo(Context context) {
             super(context);
-
             bmp = BitmapFactory.decodeResource(getResources(), R.drawable.ic_info_black_24dp
             );
 

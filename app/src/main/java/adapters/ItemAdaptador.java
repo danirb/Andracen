@@ -1,32 +1,20 @@
 package adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.io.Serializable;
 import java.util.List;
 
 import dto.Item;
 import dto.ItemCompleto;
 import es.hol.danirb.andracen.R;
-import es.hol.danirb.andracen.controladores.ConfiguracionActivity;
 import es.hol.danirb.andracen.controladores.ItemDetallado;
-import es.hol.danirb.andracen.controladores.ListadoItem;
-import es.hol.danirb.andracen.controladores.ListadoZonas;
-import rest.Service;
-import rest.ServiceGenerator;
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
 
 /**
  * Created by dani on 14/12/15.
