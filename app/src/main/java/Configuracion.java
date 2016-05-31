@@ -1,5 +1,3 @@
-package es.hol.danirb.andracen.controladores;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 

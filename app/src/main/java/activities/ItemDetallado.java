@@ -1,4 +1,4 @@
-package es.hol.danirb.andracen.controladores;
+package activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,9 +13,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import dto.Item;
-import dto.ItemCompleto;
 import es.hol.danirb.andracen.R;
+import models.Item;
+import models.ItemCompleto;
 
 public class ItemDetallado extends AppCompatActivity {
     Item articulo;

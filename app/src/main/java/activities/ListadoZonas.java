@@ -1,4 +1,4 @@
-package es.hol.danirb.andracen.controladores;
+package activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,12 +7,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import adapters.ZonaAdaptador;
-import dto.Zona;
 import es.hol.danirb.andracen.R;
+import models.Zona;
 
 public class ListadoZonas extends AppCompatActivity {
 

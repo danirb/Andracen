@@ -1,4 +1,4 @@
-package es.hol.danirb.andracen.controladores;
+package activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +10,10 @@ import android.widget.Button;
 import java.io.Serializable;
 import java.util.List;
 
-import dto.Item;
-import dto.Tipo;
-import dto.Zona;
 import es.hol.danirb.andracen.R;
-
+import models.Item;
+import models.Tipo;
+import models.Zona;
 import rest.Service;
 import rest.ServiceGenerator;
 import retrofit.Call;

@@ -3,9 +3,12 @@
     package="es.hol.danirb.andracen">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 
     <application
-        android:name=".controladores.Aplicacion"
+        android:name="Aplicacion"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,20 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".controladores.PantallaCarga"
+            android:name="activities.PantallaCarga"
             android:label="@string/andracen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controladores.ConfiguracionActivity" />
-        <activity android:name=".controladores.ListadoItem" />
-        <activity android:name=".controladores.ListadoZonas" />
-        <activity android:name=".controladores.ListadoTipos" />
+        <activity android:name="activities.ConfiguracionActivity" />
+        <activity android:name="activities.ListadoItem" />
+        <activity android:name="activities.ListadoZonas" />
+        <activity android:name="activities.ListadoTipos" />
         <activity
-            android:name=".controladores.ItemDetallado"
+            android:name="activities.ItemDetallado"
             android:label="@string/title_activity_item_detallado"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

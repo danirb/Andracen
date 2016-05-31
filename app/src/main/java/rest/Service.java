@@ -1,13 +1,11 @@
 package rest;
 
-import android.database.Observable;
-
 import java.util.List;
 
-import dto.Item;
-import dto.ItemCompleto;
-import dto.Tipo;
-import dto.Zona;
+import models.Item;
+import models.ItemCompleto;
+import models.Tipo;
+import models.Zona;
 import retrofit.Call;
 import retrofit.http.GET;
 import retrofit.http.Path;

@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import dto.Item;
-import dto.ItemCompleto;
+import activities.ItemDetallado;
 import es.hol.danirb.andracen.R;
-import es.hol.danirb.andracen.controladores.ItemDetallado;
+import models.Item;
+import models.ItemCompleto;
 
 /**
  * Created by dani on 14/12/15.

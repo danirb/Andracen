@@ -1,14 +1,9 @@
 package rest;
 
 
-import android.content.Context;
-import android.content.SharedPreferences;
-
 import com.squareup.okhttp.OkHttpClient;
 
-import java.util.concurrent.TimeUnit;
-
-import es.hol.danirb.andracen.controladores.Aplicacion;
+import Aplicacion;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 
