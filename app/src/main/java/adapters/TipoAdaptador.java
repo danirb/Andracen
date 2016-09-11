@@ -18,7 +18,6 @@ import dto.Item;
 import dto.Tipo;
 import es.hol.danirb.andracen.R;
 import es.hol.danirb.andracen.controladores.ConfiguracionActivity;
-import es.hol.danirb.andracen.controladores.ItemDetallado;
 import es.hol.danirb.andracen.controladores.ListadoItem;
 import rest.Service;
 import rest.ServiceGenerator;
@@ -69,16 +68,7 @@ this.tipoList = tipoList;
     public int getItemCount() {
         return tipoList.size();
     }
-    public class TipoViewHolder extends RecyclerView.ViewHolder {
-        CardView cv;
-        TextView nombre;
 
-        public TipoViewHolder(View itemView) {
-            super(itemView);
-            cv = (CardView) itemView.findViewById(R.id.cv_tipos);
-            nombre = (TextView) itemView.findViewById(R.id.tvNombreTipoCL);
-        }
-    }
     private void mostrarItems(String nombretipo) throws Exception {
         Service client = ServiceGenerator.createService(Service.class);
         Call<List<Item>> call1 = client.getItemPorTipo(nombretipo);
@@ -107,5 +97,16 @@ this.tipoList = tipoList;
                 Log.d("onFailure", t.toString());
             }
         });
+    }
+
+    public class TipoViewHolder extends RecyclerView.ViewHolder {
+        CardView cv;
+        TextView nombre;
+
+        public TipoViewHolder(View itemView) {
+            super(itemView);
+            cv = (CardView) itemView.findViewById(R.id.cv_tipos);
+            nombre = (TextView) itemView.findViewById(R.id.tvNombreTipoCL);
+        }
     }
 }
