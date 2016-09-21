@@ -1,10 +1,8 @@
-package dto;
+package models;
 
 import java.io.Serializable;
 
-/**
- * Created by dani on 14/12/15.
- */
+
 public class Item implements Serializable{
     private int iditem;
     private  String nombreitem;

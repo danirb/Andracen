@@ -1,4 +1,4 @@
-package es.hol.danirb.andracen.controladores;
+package activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import java.util.List;
 
 import adapters.ItemAdaptador;
-import dto.Item;
 import es.hol.danirb.andracen.R;
+import models.Item;
 
 /**
  * Created by dani on 14/12/15.

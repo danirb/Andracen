@@ -14,12 +14,11 @@ import android.widget.Toast;
 import java.io.Serializable;
 import java.util.List;
 
-import dto.Item;
-import dto.Zona;
 import es.hol.danirb.andracen.R;
 import es.hol.danirb.andracen.controladores.ConfiguracionActivity;
-import es.hol.danirb.andracen.controladores.ItemDetallado;
 import es.hol.danirb.andracen.controladores.ListadoItem;
+import models.Item;
+import models.Zona;
 import rest.Service;
 import rest.ServiceGenerator;
 import retrofit.Call;

@@ -17,7 +17,7 @@ public class Configuracion {
         }
 
         public String getIp() {
-                return this.sharedPreferences.getString(IP, "192.168.168.1.15");
+                return this.sharedPreferences.getString(IP, "192.168.168.4.77");
         }
 
         public void setIp(String ip) {

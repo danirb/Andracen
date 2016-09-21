@@ -18,7 +18,6 @@ import dto.Item;
 import dto.Tipo;
 import es.hol.danirb.andracen.R;
 import es.hol.danirb.andracen.controladores.ConfiguracionActivity;
-import es.hol.danirb.andracen.controladores.ItemDetallado;
 import es.hol.danirb.andracen.controladores.ListadoItem;
 import rest.Service;
 import rest.ServiceGenerator;
