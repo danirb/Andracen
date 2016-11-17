@@ -68,16 +68,7 @@ this.zonaList=zonaList;
     public int getItemCount() {
         return zonaList.size();
     }
-    public class ZonaViewHolder extends RecyclerView.ViewHolder {
-        CardView cv;
-        TextView nombre;
 
-        public ZonaViewHolder(View itemView) {
-            super(itemView);
-            cv = (CardView) itemView.findViewById(R.id.cv_zonas);
-            nombre = (TextView) itemView.findViewById(R.id.tvNombreZonaCL);
-        }
-    }
     private void mostrarItems(String nombretipo) throws Exception {
         Service client = ServiceGenerator.createService(Service.class);
         Call<List<Item>> call1 = client.getItemPorZona(nombretipo);
@@ -107,5 +98,16 @@ this.zonaList=zonaList;
                 Log.d("onFailure", t.toString());
             }
         });
+    }
+
+    public class ZonaViewHolder extends RecyclerView.ViewHolder {
+        CardView cv;
+        TextView nombre;
+
+        public ZonaViewHolder(View itemView) {
+            super(itemView);
+            cv = (CardView) itemView.findViewById(R.id.cv_zonas);
+            nombre = (TextView) itemView.findViewById(R.id.tvNombreZonaCL);
+        }
     }
 }
